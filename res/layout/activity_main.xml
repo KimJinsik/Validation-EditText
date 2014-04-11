@@ -1,0 +1,31 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:destiny="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <destiny738.tistory.com.validation.ValidationEditText
+        android:id="@+id/testEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="20dp" 
+        android:background="@drawable/edit_text_background"
+        android:inputType="textEmailAddress"
+        destiny:errorFontSize="12"
+        destiny:errorMessage="이메일 쓰랬지??"
+        destiny:validationType="email"
+        />
+    
+    <destiny738.tistory.com.validation.ValidationEditText
+        android:id="@+id/testEditText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        destiny:validationType="number"
+        destiny:errorMessage="숫자숫자 8"
+        destiny:validationMinLength="8"
+        destiny:validationMaxLength="12"/>
+   
+</LinearLayout>

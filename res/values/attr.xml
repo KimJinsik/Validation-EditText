@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="destiny">
+        <attr name="popupTop" format="dimension" />
+        <attr name="popupLeft" format="dimension" />
+        
+        <attr name="errorIcon" format="integer" />
+        <attr name="errorIconHeightSize" format="dimension" />
+        <attr name="errorIconWidthSize" format="dimension" />
+        <attr name="errorBackground" format="integer" />
+		<attr name="errorFontSize" format="integer" />
+		<attr name="errorFontColor" format="color" />
+		<attr name="errorMessage" format="string" />
+		
+		<attr name="validationType" format="string" />
+		<!-- email / url / number -->
+		<attr name="validationMaxLength" format="integer" />
+		<attr name="validationMinLength" format="integer" />
+		
+        
+    </declare-styleable>
+</resources>
