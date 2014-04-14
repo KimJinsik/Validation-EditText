@@ -59,15 +59,15 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 	private String validationType;
 	
 	// to declare variables for saving validation information 
-	private String REGEX;		// regular expression
-	private int MINLENGTH;		// minimum length. 
-	private int MAXLENGTH;		// maximum length
+	private String REGEX;			// regular expression
+	private int MINLENGTH;			// minimum length. 
+	private int MAXLENGTH;			// maximum length
 	// I think information of lengths is not useful because of regular expression can covered length of string.
 	
 	// to declare flags
-	private boolean regFlag;	// whether validate patterns or not
-	private boolean lengthFlag;	// whether validate length or not
-	private boolean showFlag;
+	private boolean regFlag;		// whether validate patterns or not
+	private boolean lengthFlag;		// whether validate length or not
+	private boolean showFlag;		// to check conflict each validation (length and regular expression)
 
 	/** constructor */
 	public ValidationEditText(Context context){
@@ -91,9 +91,9 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 	/**
 	 * initValidationeditText()
 	 * 
-	 * To set the initial status on EditText. 
-	 * Reset the flags. Set default message, background, icon for error and listener.  
-	 */
+	 * To get the attributes and to apply your applications. (To set the initial status on EditText.)
+	 * Reset the flags. 
+	 */ 
 	private void initValidationEditText(){
 		int attrMinLength = MINLENGTH = 0;
 		int attrMaxLength = MAXLENGTH = Integer.MAX_VALUE;
@@ -103,12 +103,12 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 			iconWidth = attrArray.getDimensionPixelSize(R.styleable.destiny_errorIconWidthSize, 20);
 			iconHeight = pixelToDpi(iconHeight);
 			iconWidth = pixelToDpi(iconWidth);
-			errorIcon = getResources().getDrawable(attrArray.getInt(R.styleable.destiny_errorIcon, R.drawable.caution_icon));
+			errorIcon = getResources().getDrawable(attrArray.getResourceId(R.styleable.destiny_errorIcon, R.drawable.caution_icon));
 			errorIcon.setBounds(0,0,iconWidth, iconHeight);
 			
 			errorMessage = attrArray.getString(R.styleable.destiny_errorMessage);
 			if ( errorMessage == null ) errorMessage = "Invalidated input";
-			errorBackground = attrArray.getInt(R.styleable.destiny_errorBackground, R.drawable.popup_background);
+			errorBackground = attrArray.getResourceId(R.styleable.destiny_errorBackground, R.drawable.popup_background);
 			errorFontSize = attrArray.getInt(R.styleable.destiny_errorFontSize, 12);
 			errorFontColor = attrArray.getColor(R.styleable.destiny_errorFontColor, Color.BLACK);
 			
@@ -144,9 +144,9 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 			}else if ( validationType.endsWith("url") ){
 				setRegex(ValidationType.VALIDATION_URL);
 			}else{
-				Log.e("destiny738.tistory.com.validation","You can not select that type");
-				Log.e("destiny738.tistory.com.validation","You can not select that type");
-				Log.e("destiny738.tistory.com.validation","You can not select that type");
+				Log.e("destiny738.tistory.com.validation","You can not select that validation type");
+				Log.e("destiny738.tistory.com.validation","You can not select that validation type");
+				Log.e("destiny738.tistory.com.validation","You can not select that validation type");
 			}
 		} 
 		
@@ -164,12 +164,11 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 	 * Method do follow these step.
 	 * 1. check the change of focus which is form focus to unfocus.
 	 * 2. check flags. 
-	 * 3.According to flags, it validate input data. 
+	 * 3. According to flags, it validate input data. 
 	 */
 	@Override
 	public void onFocusChange(View v, boolean hasFocus) {
 		// TODO Auto-generated method stub
-		
 		// lost focus
 		if ( !hasFocus ){	
 			String input = this.getText().toString();		// save input data

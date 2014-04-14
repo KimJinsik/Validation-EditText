@@ -5,10 +5,10 @@
         <attr name="popupTop" format="dimension" />
         <attr name="popupLeft" format="dimension" />
         
-        <attr name="errorIcon" format="integer" />
+        <attr name="errorIcon" format="reference" />
         <attr name="errorIconHeightSize" format="dimension" />
         <attr name="errorIconWidthSize" format="dimension" />
-        <attr name="errorBackground" format="integer" />
+        <attr name="errorBackground" format="reference" />
 		<attr name="errorFontSize" format="integer" />
 		<attr name="errorFontColor" format="color" />
 		<attr name="errorMessage" format="string" />
