@@ -41,21 +41,21 @@ Usage
   ```
 3. Configure attributes.
  * Position of pop-up  
-    * `popupTop` - 
-    * `popupLeft` -
+    * `popupTop` - The top position of pop-up message. Unit: "dp". Default: "-4dp".
+    * `popupLeft` - The left position of pop-up message. Unit: "dp". Default: "0dp".
  * Error Icon
-    * `errorIcon` - 
-    * `errorIconHeightSize` -
-    * `errorIconWidthSize` -
+    * `errorIcon` - The image of error icon. Unit: "reference". Default: "R.drawable.caution_icon".
+    * `errorIconHeightSize` - The height of icon. Unit: "dp". Default: "20dp".
+    * `errorIconWidthSize` - The width of icon. Unit: "dp". Default: "20dp".
  * Error pop-up
-    * `errorBackground` -
-    * `errorFontSize` - 
-    * `errorFontColor` - 
-    * `errorMessage` - 
+    * `errorBackground` - The background of pop-up window. Unit: "reference". Default: "R.drawable.popup_background".
+    * `errorFontSize` - The size of font in pop-up window. Unit: "integer". Default: "12".
+    * `errorFontColor` - The color of font in pop-up window. Unit: "color". Default: "Color.BLACK".
+    * `errorMessage` - The message in pop-up window for error. Unit: "string". Default: "Invalidated input".
  * Validation
-    * `validationType` -
-    * `validationMaxLength` -
-    * `validationMinLength` -
+    * `validationType` - Type for validation. Currently, number, url address and e-mail address can validate. Do not have default.
+    * `validationMaxLength` - Maximum length of input. If you set smaller than minimum length, then it is not act and it notify error message to you using log. Do not have default.
+    * `validationMinLength` - Minimum length of input. If you set larger than maximum length, then it is not act and it notify error message to you using log. Do not have default.
 
 TODO
 =====
