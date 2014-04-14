@@ -7,9 +7,7 @@ You already know way to notify error messages (using showError() function) on Ed
 **NOTE:**
 If you think to add more regular expression, Please [visit my blog](http://destiny738.tistory.com) and write guestbook!
 
-
-(example screen-shot)
-
+![ScreenShot](https://github.com/KimJinsik/ValidationEditTextSample/blob/master/res/drawable/sample_screen_shot.png?raw=true)
 
 Features
 =====
