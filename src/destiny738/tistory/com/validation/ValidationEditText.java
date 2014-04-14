@@ -173,7 +173,6 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 		if ( !hasFocus ){	
 			String input = this.getText().toString();		// save input data
 			// regulation check
-			myLog(regFlag+"");
 			if ( regFlag && !showFlag){
 				if ( !Pattern.matches(REGEX, input) && !input.equals("") ){
 					showError();
@@ -190,6 +189,7 @@ public class ValidationEditText extends EditText implements OnFocusChangeListene
 					resetError();
 				}
 			}
+			showFlag = false;
 		}
 	}
 	
