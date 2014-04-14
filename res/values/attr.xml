@@ -9,15 +9,14 @@
         <attr name="errorIconHeightSize" format="dimension" />
         <attr name="errorIconWidthSize" format="dimension" />
         <attr name="errorBackground" format="reference" />
-		<attr name="errorFontSize" format="integer" />
-		<attr name="errorFontColor" format="color" />
-		<attr name="errorMessage" format="string" />
+	<attr name="errorFontSize" format="integer" />
+	<attr name="errorFontColor" format="color" />
+	<attr name="errorMessage" format="string" />
+	
+	<attr name="validationType" format="string" />
+	<!-- email / url / number -->
+	<attr name="validationMaxLength" format="integer" />
+	<attr name="validationMinLength" format="integer" />
 		
-		<attr name="validationType" format="string" />
-		<!-- email / url / number -->
-		<attr name="validationMaxLength" format="integer" />
-		<attr name="validationMinLength" format="integer" />
-		
-        
     </declare-styleable>
 </resources>
