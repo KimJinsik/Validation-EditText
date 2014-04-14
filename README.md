@@ -1,8 +1,8 @@
 ValidationEditText
 ==================
-`ValidationEditText` is inheritanced by editText. It can be useful to validate input data and to notify error message. 
+`ValidationEditText` is inherited by EditText. It can be useful to validate input data and to notify error message. 
 
-You already know way to notify error messages(using showError() function) on editText. I think however, design of default error message is not good to view. But, ValidationEditText provide powerful way to design error message. 
+You already know way to notify error messages (using showError() function) on EditText. I think however, design of default error message is not good to view. But, ValidationEditText provides powerful way to design error message. 
 
 **NOTE:**
 If you think to add more regular expression, Please visit my blog and write guestbook!
@@ -53,7 +53,7 @@ Usage
     * `errorFontColor` - The color of font in pop-up window. Unit: "color". Default: "Color.BLACK".
     * `errorMessage` - The message in pop-up window for error. Unit: "string". Default: "Invalidated input".
  * Validation
-    * `validationType` - Type for validation. Currently, number, url address and e-mail address can validate. Do not have default.
+    * `validationType` - Type for validation. Currently, number, url address and e-mail address can validate. (to select "email", "url" or "number"). Do not have default.
     * `validationMaxLength` - Maximum length of input. If you set smaller than minimum length, then it is not act and it notify error message to you using log. Do not have default.
     * `validationMinLength` - Minimum length of input. If you set larger than maximum length, then it is not act and it notify error message to you using log. Do not have default.
 
@@ -61,7 +61,7 @@ TODO
 =====
 
 * Validate only number.
-* Validate url address.
+* Validate URL address.
 * Validate e-mail address.
 * To edit design of error message's pop-up.
 * To edit icon of error message.
