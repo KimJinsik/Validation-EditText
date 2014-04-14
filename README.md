@@ -2,10 +2,10 @@ ValidationEditText
 ==================
 `ValidationEditText` is inherited by EditText. It can be useful to validate input data and to notify error message. 
 
-You already know way to notify error messages (using showError() function) on EditText. I think however, design of default error message is not good to view. But, ValidationEditText provides powerful way to design error message. 
+You already know way to notify error messages (using showError() function) on EditText. I think however, design of default error message is not good to view. But, ValidationEditText provides powerful way to design error message. And [sample click here](https://github.com/KimJinsik/ValidationEditTextSample).
 
 **NOTE:**
-If you think to add more regular expression, Please [`visit my blog`](http://destiny738.tistory.com) and write guestbook!
+If you think to add more regular expression, Please [visit my blog](http://destiny738.tistory.com) and write guestbook!
 
 
 (example screen-shot)
