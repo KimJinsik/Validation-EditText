@@ -58,6 +58,7 @@ Usage
 
 TODO
 =====
+The `ValidationEditText` supports the following: 
 
 * Validate only number.
 * Validate URL address.
